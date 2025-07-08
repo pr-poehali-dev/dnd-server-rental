@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { DarkFantasyButton } from "@/components/ui/dark-fantasy-button";
 import {
   Card,
   CardContent,
@@ -12,21 +13,25 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-stone-900 via-stone-800 to-amber-900">
+    <div className="min-h-screen bg-gradient-to-b from-darkstone-900 via-darkstone-800 to-blood-900">
       {/* Header */}
-      <header className="border-b border-amber-600/30 bg-stone-900/90 backdrop-blur-sm">
+      <header className="border-b border-blood-700/30 bg-darkstone-900/90 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center">
-                <Icon name="Castle" size={24} className="text-stone-900" />
-              </div>
+              <div
+                className="w-12 h-12 bg-cover bg-center rounded-full border-2 border-blood-700"
+                style={{
+                  backgroundImage:
+                    "url(/img/8f39c1e9-d6f0-4fd6-9f19-9f0f2802a3e5.jpg)",
+                }}
+              ></div>
               <div>
-                <h1 className="text-2xl font-bold text-amber-100 font-serif">
-                  Dragon's Den Server
+                <h1 className="text-2xl font-bold text-parchment-500 font-serif">
+                  RollForRent
                 </h1>
-                <p className="text-sm text-amber-300">
-                  Аренда серверов для D&D сессий
+                <p className="text-sm text-blood-500">
+                  Брось кубик... если осмелишься
                 </p>
               </div>
             </div>
@@ -61,29 +66,22 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-6xl font-bold text-amber-100 mb-6 font-serif leading-tight">
               Добро пожаловать в
-              <span className="block text-amber-400">Dragon's Den</span>
+              <span className="block text-amber-400">RollForRent</span>
             </h2>
-            <p className="text-xl text-stone-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Профессиональные серверы для проведения онлайн сессий по Dungeons
-              & Dragons. Стабильное соединение, готовые миры и незабываемые
-              приключения ждут вас.
+            <p className="text-xl text-parchment-800 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Арендуй кости рока... Серверы, где даже цифры кричат. D20 одобряет
+              твой выбор... или проклинает на вечность. Готовые миры и
+              незабываемые приключения ждут смельчаков.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <Button
-                size="lg"
-                className="bg-amber-600 hover:bg-amber-700 text-stone-900 px-8 py-3 text-lg font-semibold"
-              >
+              <DarkFantasyButton size="lg" variant="primary">
                 <Icon name="Calendar" className="mr-2" size={20} />
-                Забронировать сессию
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-amber-400 text-amber-400 hover:bg-amber-600 hover:text-stone-900 px-8 py-3 text-lg"
-              >
+                Войти в Подземелье
+              </DarkFantasyButton>
+              <DarkFantasyButton size="lg" variant="outline">
                 <Icon name="BookOpen" className="mr-2" size={20} />
-                Посмотреть приключения
-              </Button>
+                Проклятые Свитки
+              </DarkFantasyButton>
             </div>
           </div>
         </div>
@@ -113,12 +111,12 @@ const Index = () => {
       <section id="calendar" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold text-amber-100 mb-4 font-serif">
-              Календарь сессий
+            <h3 className="text-4xl font-bold text-parchment-500 mb-4 font-serif">
+              Кровавый календарь
             </h3>
-            <p className="text-stone-300 max-w-2xl mx-auto">
-              Выберите удобное время для вашего приключения. Интеграция с Google
-              Calendar.
+            <p className="text-parchment-800 max-w-2xl mx-auto">
+              Выбери день для погружения в бездну. Время истекает... каждый час
+              может стать последним.
             </p>
           </div>
           <Card className="max-w-4xl mx-auto bg-stone-800/80 border-amber-600/30">
@@ -168,11 +166,12 @@ const Index = () => {
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold text-amber-100 mb-4 font-serif">
-              Популярные приключения
+            <h3 className="text-4xl font-bold text-parchment-500 mb-4 font-serif">
+              Проклятые приключения
             </h3>
-            <p className="text-stone-300 max-w-2xl mx-auto">
-              Готовые кампании и одноразовые сессии для любого уровня игроков.
+            <p className="text-parchment-800 max-w-2xl mx-auto">
+              Готовые кампании, где каждый бросок кубика может стать твоим
+              последним. Осмеливаешься?
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -279,12 +278,12 @@ const Index = () => {
       <section id="contact" className="py-20 bg-stone-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold text-amber-100 mb-4 font-serif">
-              Как с нами связаться
+            <h3 className="text-4xl font-bold text-parchment-500 mb-4 font-serif">
+              Призыв в бездну
             </h3>
-            <p className="text-stone-300 max-w-2xl mx-auto">
-              Остались вопросы? Мы всегда готовы помочь вам начать ваше
-              приключение.
+            <p className="text-parchment-800 max-w-2xl mx-auto">
+              Готов заключить сделку с тьмой? Мы ждем твоего зова из глубин
+              подземелий.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -362,7 +361,7 @@ const Index = () => {
                 <Icon name="Castle" size={16} className="text-stone-900" />
               </div>
               <span className="text-xl font-bold text-amber-100 font-serif">
-                Dragon's Den Server
+                RollForRent
               </span>
             </div>
             <p className="text-stone-400 mb-4">
@@ -381,7 +380,7 @@ const Index = () => {
               </a>
             </div>
             <p className="text-stone-500 text-sm mt-4">
-              © 2024 Dragon's Den Server. Все права защищены.
+              © 2024 RollForRent. Все права защищены.
             </p>
           </div>
         </div>
